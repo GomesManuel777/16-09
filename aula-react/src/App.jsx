@@ -1,17 +1,12 @@
 import { useState } from 'react'
 import './App.css'
-import home from './pages/home'
-import contato from './pages/contato'
-import sobre from './pages/sobre'
+import Home from './pages/home'
+import Contato from './pages/contato'
+import Sobre from './pages/sobre'
+import { Link, Route, Routes } from 'react-router'
 
 function App() {
-  const [pagina, setPagina] = useState('home')
-  const renderizarPagina= ()=>{
-    if (pagina === 'home') return <home/>
-    if (pagina === 'sobre') return <sobre/>
-    if (pagina === 'contatos') return <contatos/>
-  }
-
+  
   return (
    <div id="container">
       <h1>Sejam bem-vindos a aula de React!</h1>
